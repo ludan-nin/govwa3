@@ -79,6 +79,11 @@ jobs:
          ifconfig
          df -h
          docker ps
+         docker images
+         docker pull golang:latest
+         docker run -d --name go_test golang 
+         docker ps
+         
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2
