@@ -74,7 +74,6 @@ jobs:
          pwd
          cat /etc/passwd
          ls -l
-         ls -l /var/docker
          ps -ef
          ip addr
          ifconfig
