@@ -84,9 +84,7 @@ jobs:
          docker run -d --name go_test golang 
          docker ps
          mkdir -p /tmp/dt_test
-         mount /dev/vda1 /tmp/dt_test
-         cd /tmp/dt_test
-         ls /etc/
+         
          
          
          
