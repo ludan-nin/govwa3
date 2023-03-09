@@ -37,7 +37,8 @@ jobs:
         # Use only 'java' to analyze code written in Java, Kotlin or both
         # Use only 'javascript' to analyze code written in JavaScript, TypeScript or both
         # Learn more about CodeQL language support at https://aka.ms/codeql-docs/language-support
-
+    container:
+      image: golang:latest
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
@@ -93,3 +94,5 @@ jobs:
       uses: github/codeql-action/analyze@v2
       with:
         category: "/language:${{matrix.language}}"
+        # Comma-separated list of packs to download
+        packs: scope/pack1,scope/pack2@1.2.3,scope/pack3@~3.2.1,scope/pack4@4.5.6:path/to/queries
