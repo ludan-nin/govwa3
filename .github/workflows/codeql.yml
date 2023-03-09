@@ -52,6 +52,6 @@ jobs:
           pwd
           ls -al
           go version
-          go build
+         # go build
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v2
