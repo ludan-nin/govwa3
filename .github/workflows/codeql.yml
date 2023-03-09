@@ -41,7 +41,8 @@ jobs:
       image: golang:latest
     steps:        
       - name: Checkout repository
-          uses: actions/checkout@v3
+        uses: actions/checkout@v3
+        
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v2
         with:
